@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jenna Itani </title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <link rel="icon" href="logo.png" type="image/png" sizes="16x16">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">JI</div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <aside class="social-media">
+    <a href="https://www.linkedin.com/in/jennaitani" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/jitani04" target="_blank"><i class="fab fa-github"></i></a>
+  </aside>
+  
+  <div id="particles-js" class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm Jenna Itani</h1>
+      <p>Full Stack Software Engineer passionate about building ideas</p>
+      <a href="#about" class="cta-button">Learn More</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <section id="about" class="animate-on-scroll" style="text-align: center;">
+      <h2>About Me</h2>
+      <p class="moving-element">I am a software engineer specialized in full-stack web development and machine learning. I thrive on creating innovative solutions and bringing ideas to life.</p>
+      <p class="moving-element">I obtained a B.S in Computer Science degree from California State University, Long Beach, in December 2024.</p>
+      <p class="moving-element">Languages: C++, Python, C#, Java, JavaScript, SQL, HTML, CSS, C</p>
+      <p style="text-align: center;"><a href="Resume_JennaItani.docx" class="cta-button" download>Download Resume</a></p>
+    </section>
+
+    <section id="experience" class="animate-on-scroll">
+      <h2>Experience</h2>
+      <div class="experience-container">
+        <div class="experience-item left">
+          <h3>Full Stack Software Development Intern</h3>
+          <p>Panasonic Avionics Corporation</p>
+          <p>6/2024 - 10/2024</p>
+          <button class="toggle-description" onclick="toggleDescription(this)">Role Description <span class="chevron"></span></button>
+          <ul>
+            <li class="moving-element"> - Developed Multipart Upload Console App utilizing ASP.NET Core, React.Js, HTML, CSS, AWS S3, and Agile Methodology and added features to the Hangar Developer Program web application to allow customers to upload and manage large application files for testing and verification.</li>
+            <li class="moving-element"> -	Implemented help ticket system features to support uploading and downloading ticket attachments, utilizing C# and React.js; Tested and troubleshot code and breakpoints on production server to ensure seamless functionality </li>
+            <li class="moving-element"> -	Collaborated with front-end and back-end developers to produce seamless and secure end-to-end experience  </li>
+          </ul>
+        </div>
+        <div class="experience-item right">
+          <h3>Coding Instructor</h3>
+          <p>Code Ninjas</p>
+          <p>1/2024 - 4/2024</p>
+          <button class="toggle-description" onclick="toggleDescription(this)">Role Description <span class="chevron"></span></button>
+          <ul>
+            <li class="moving-element"> - Guided and inspired students, aged 7-15, in mastering computer programming through a nine-level gaming curriculum involving C# and JavaScript, using strong communication skills</li>
+          </ul>
+        </div> 
+        <div class="experience-item left">
+          <h3>Machine Learning Intern</h3>
+          <p>Verizon Wireless</p>
+          <p>8/2023 - 12/2023</p>
+          <button class="toggle-description" onclick="toggleDescription(this)">Role Description <span class="chevron"></span></button>
+          <ul>
+            <li class="moving-element"> -	Achieved 97% accuracy on an image-based similarity tool which identifies the most similar images of various devices, in a team of 4</li>
+            <li class="moving-element"> - Utilized Pytorch framework, numpy, huggingface and pandas Python libraries to build, train, and test multiple YOLOv8 models and an Image Classification model </li>
+            <li class="moving-element"> -	Collected images and utilized scripts for data preprocessing before model training; Implemented hyper-parameter tuning to determine best model performance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="animate-on-scroll">
+      <h2>Projects</h2>
+      <div class="project">
+        <img src="CoureHub.png" alt="Project Image" class="project-image">
+        <div class="project-details">
+          <h3 class="project-title">CourseHub</h3>
+          <p class="project-description moving-element">A collaboration platform for college students to join, create, post, and comment on channels</p>
+          <p class="project-description moving-element">Tools: React, HTML, Tailwind CSS, Python Flask, MongoDB, Figma</p>
+          <p class="project-description moving-element"> Project demo: <a href="https://www.youtube.com/watch?v=SAqRzDYyfaU" style="color: white;">Click Here</a></p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="Arcade.png" alt="Project Image" class="project-image">
+        <div class="project-details">
+          <h3 class="project-title">Arcade</h3>
+          <p class="project-description moving-element">A game center web app providing access to various games, all in one place</p>
+          <p class="project-description moving-element">Tools: Express.js, Node.js, HTML, MongoDB</p>
+          <p class="project-description moving-element"> Source Code: <a href="https://www.github.com/jitani04/Arcade" style="color: white;"> Click Here</a></p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="myGraph.png" alt="Project Image" class="project-image">
+        <div class="project-details">
+          <h3 class="project-title">MyGraph</h3>
+          <p class="project-description moving-element"> MyGraph is a Python-based framework built using the NetworkX library to manage, analyze, and simulate complex networks.  It provides several features for graph creation, shortest path calculation, epidemic simulation using the SIR model, and visualizations.</p>
+          <p class="project-description moving-element">Tools: Python NetworkX</p>
+          <p class="project-description moving-element"> Source Code: <a href="https://github.com/jitani04/Graph_Theory" style="color: white;">Click Here</a></p>
+
+        </div>
+      </div>
+      <div class="project">
+        <img src="homeOwnership.jpg" alt="Project Image" class="project-image">
+        <div class="project-details">
+          <h3 class="project-title">Home Ownership Prediction</h3>
+          <p class="project-description moving-element">This project demonstrates a binary classification task, predicting whether an individual is likely to be a homeowner based on various features like income, age, and workclass. I prepared a dataset in order to create, train, and test a Random Tree Classifier model and a Logistic Regression model.</p>
+          <p class="project-description moving-element">Tools: Python Pandas, NumPy, Seaborn, Matplotlib</p>
+          <p class="project-description moving-element"> Source Code: <a href="https://github.com/jitani04/Home-Ownership-Prediction" style="color: white;">Click Here</a></p>
+
+        </div>
+      </div>
+      <div class="view-more" style="text-align: center;">
+        <p>View more of my work on <a href="https://github.com/jitani04" target="_blank" style="color: white;">GitHub</a></p>
+      </div>
+    </section>
+
+    <section id="contact" class="animate-on-scroll" style="text-align: center;">
+      <h2>Contact</h2>
+      <p class="moving-element">Interested in collaborating or have an opportunity in mind? Let's chat!</p>
+      <p><a href="mailto:jmitani4@gmail.com" class="cta-button">Contact Me</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Jenna Itani</p>
+  </footer>
+
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function toggleDescription(button) {
+      const item = button.parentElement;
+      item.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

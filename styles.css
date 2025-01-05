@@ -1,0 +1,409 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+  color: #f1f1f1; /* Light grey text */
+  background-color: #333; /* Dark grey background */
+}
+
+header {
+  background-color: rgba(68, 68, 68, 0.9); /* Slightly lighter grey background with transparency */
+  color: #f1f1f1; /* Light grey text */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Fix the header at the top */
+  width: 100%; /* Ensure the header takes the full width */
+  z-index: 1000; /* Ensure the header is above other content */
+}
+
+header .logo {
+  font-size: 2rem; /* Make the logo bigger */
+  font-family: 'Niagara', art deco; /* Use a cursive-like font */
+  color: #ffffff; /* Make the logo white */
+}
+
+header .main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  margin: 0;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+}
+
+header .main-nav a {
+  color: #f1f1f1; /* Light grey text */
+  text-decoration: none;
+  font-weight: 400;
+  padding: 10px 15px; /* Add padding to ensure clickable area */
+}
+
+header .main-nav a:hover {
+  color: #b0b0b0; /* Grey color on hover */
+}
+
+.hero {
+  position: relative;
+  height: 100vh; /* Ensure the hero section has a defined height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f1f1f1; /* Light grey text */
+  text-align: center;
+  padding-top: 80px; /* Add padding to avoid overlap with fixed header */
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out; /* Add fade-in effect */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Add transition for hiding */
+}
+
+.hero-content.hidden {
+  opacity: 0;
+  transform: translate(-50%, -60%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #555; /* Medium grey background */
+  color: #f1f1f1; /* Light grey text */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  width: fit-content; /* Ensure the button width fits the text */
+}
+
+.cta-button:hover {
+  background-color: #777; /* Slightly lighter grey */
+}
+
+.content {
+  padding-top: 700px; /* Add padding to ensure content starts below the hero section */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  z-index: 2;
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section {
+  padding: 60px 20px;
+  background-color: #444; /* Slightly lighter grey background */
+  width: 80%; /* Adjust width to be smaller */
+  margin: 0 auto; /* Center the content */
+  z-index: 2;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f1f1f1; /* Light grey text */
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add gap between projects */
+  width: 100%; /* Ensure the project container fits within the content section */
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #555; /* Medium grey background */
+  margin-bottom: 20px;
+  width: 96%; /* Take up the full width of the container */
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project-image {
+  width: 50%;
+  height: auto;
+}
+
+.project-details {
+  width: 50%;
+  padding: 20px;
+  color: #f1f1f1; /* Light grey text */
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #ddd; /* Lighter grey text */
+}
+
+.experience-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 70%; /* Make the container smaller */
+}
+
+.experience-container::after {
+  content: '';
+  position: absolute;
+  width: 3px; /* Make the line thinner */
+  background-color: #555;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1.5px; /* Adjust for thinner line */
+}
+
+.experience-item {
+  padding: 10px 20px; /* Reduce padding */
+  position: relative;
+  background-color: inherit;
+  width: 45%; /* Make the items smaller */
+}
+
+.experience-item::after {
+  content: '';
+  position: absolute;
+  width: 15px; /* Make the circle smaller */
+  height: 15px;
+  right: -10px;
+  background-color: #555;
+  border: 4px solid #444;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.experience-item.left {
+  left: 0;
+}
+
+.experience-item.right {
+  left: 55%; /* Adjust for smaller items */
+}
+
+.experience-item.right::after {
+  left: -10px; /* Adjust for smaller circle */
+}
+
+.experience-item h3, .experience-item p, .experience-item ul {
+  margin: 0;
+  padding: 0;
+  color: #f1f1f1; /* Light grey text */
+}
+
+.experience-item ul {
+  list-style: none;
+  padding-left: 20px;
+  display: none; /* Hide by default */
+}
+
+.experience-item ul li {
+  margin-bottom: 10px;
+}
+
+.experience-item.active ul {
+  display: block; /* Show when active */
+}
+
+.experience-item .toggle-description {
+  background: none;
+  color: #f1f1f1; /* Light grey text */
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.experience-item .toggle-description .chevron {
+  border: solid #f1f1f1; /* Light grey color */
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.experience-item.active .toggle-description .chevron {
+  transform: rotate(-135deg);
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-item {
+  background-color: transparent; /* No background */
+  border: none; /* No border */
+  padding: 0; /* No padding */
+}
+
+.education-item h3, .education-item p {
+  margin: 0;
+  padding: 0;
+  color: #f1f1f1; /* Light grey text */
+}
+
+#about {
+  margin-top: 0; /* Reset margin */
+  padding-top: 100px; /* Add padding to ensure it is below the hero section */
+  text-align: center; /* Center the text */
+}
+
+#about .cta-button {
+  display: block;
+  margin: 20px auto; /* Center the button */
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  color: #f1f1f1; /* Ensure the text color is light grey */
+}
+
+.skills-list li {
+  color: #f1f1f1; /* Light grey text */
+  font-size: 1rem;
+}
+
+#contact {
+  text-align: center; /* Center the text */
+}
+
+#contact p {
+  font-size: 1.2rem;
+  color: #f1f1f1; /* Light grey text */
+}
+
+#contact .cta-button {
+  display: block;
+  margin: 20px auto; /* Center the button */
+}
+
+footer {
+  background-color: #1a1a1a; /* Darker background */
+  color: #f1f1f1; /* Light grey text */
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+.social-media {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: transparent; /* Make background transparent */
+  border-radius: 0 5px 5px 0;
+  z-index: 1000; /* Ensure the social media icons are above other content */
+}
+
+.social-media a {
+  color: #fff; /* White text */
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+social-media a:hover {
+  color: #b0b0b0; /* Grey color on hover */
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#about .cta-button {
+  display: block;
+  margin: 20px auto; /* Center the button */
+}
+
+.moving-element {
+  position: relative;
+  animation: fadeInEffect 2s ease-in-out;
+}
+
+@keyframes fadeInEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
