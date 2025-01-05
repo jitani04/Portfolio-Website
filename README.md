@@ -25,15 +25,4 @@ Information on how to get in touch with Jenna Itani for collaboration or opportu
 A link to view more of Jenna Itani's work on her [GitHub](https://github.com/jitani04).
 
 ## How to Run
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/jitani04/Portfolio-Website.git
-    ```
-2. Navigate to the project directory:
-    ```sh
-    cd resume_website
-    ```
-3. Open `index.html` in your preferred web browser.
-
-## License
-This project is licensed under the MIT License.
+Visit https://home.csulb.edu/~030018662/resume_website/
