@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jenna Itani </title>
+  <title>Jenna Itani</title>
+  <meta name="description" content="Jenna Itani — Full Stack Software Engineer. Portfolio showcasing projects in web development, ML, and cloud engineering.">
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Jenna Itani — Portfolio">
+  <meta property="og:description" content="Full Stack Software Engineer. Projects in React, Next.js, Python, ML, and cloud.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
+  <!-- fonts preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -15,9 +24,10 @@
   <link rel="icon" href="logo.png" type="image/png" sizes="16x16">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="main-header">
     <div class="logo">JI</div>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Main navigation">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -27,8 +37,8 @@
     </nav>
   </header>
   <aside class="social-media">
-    <a href="https://www.linkedin.com/in/jennaitani" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/jitani04" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/jennaitani" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/jitani04" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
   </aside>
   
   <div id="particles-js" class="hero">
@@ -40,10 +50,11 @@
   </div>
 
   <div class="content">
+    <main id="main-content">
     <section id="about" class="animate-on-scroll" style="text-align: center;">
       <h2>About Me</h2>
       <p class="moving-element">I am a software engineer specialized in full-stack web development. I thrive on creating innovative solutions and bringing ideas to life. I'm interested in all things tech, including ML/AI, UX/UI Design, Cloud Computing, etc.</p>
-      <p class="moving-element">I obtained a B.S in Computer Science degree from California State University, Long Beach in December 2024.</p>
+      <p class="moving-element">I am currently a Masters student in Computer Science at UCLA! I obtained a B.S in Computer Science degree from California State University, Long Beach in December 2024.</p>
       <p class="moving-element">Languages: C++, Python, C#, Java, JavaScript, SQL, HTML, CSS, C</p>
       <p class="moving-element">Frameworks: Web: React.js, RESTful API, Angular, TypeScript, Vue.js, Next.js, Node.js, Django, Bootstrap, Tailwind, ASP.NET, JSX<br>
            ML/Data: Pandas, NumPy, PyTorch, TensorFlow, Scikit-Learn, Matplotlib</p>
@@ -53,6 +64,18 @@
 
     <section id="experience" class="animate-on-scroll">
       <h2>Experience</h2>
+      <div class="experience-container">
+        <div class="experience-item left">
+          <h3>Software Engineer in Test Intern</h3>
+          <p>IntuigenceAI</p>
+          <p>8/2025 - Present</p>
+          <button class="toggle-description" onclick="toggleDescription(this)">Role Description <span class="chevron"></span></button>
+          <ul>
+            <li class="moving-element"> - built a regression testing suite using Playwright and incorporated it into the CI/CD pipeline using Docker and CircleCI</li>
+            <li class="moving-element"> - collaborated with developers to ensure comprehensive test coverage and improve overall software quality</li>
+            <li class="moving-element"> - Worked closely with cross-functional teams to identify, document, and resolve software defects, enhancing product reliability and user satisfaction, using Linear</li>
+          </ul>
+        </div> 
       <div class="experience-container">
         <div class="experience-item right">
           <h3>Frontend Developer Intern</h3>
@@ -103,68 +126,82 @@
     <section id="projects" class="animate-on-scroll">
       <h2>Projects</h2>
       <div class="project">
-        <img src="CoureHub.png" alt="Project Image" class="project-image">
+        <img src="CoureHub.png" alt="CourseHub screenshot" class="project-image" loading="lazy">
         <div class="project-details">
           <h3 class="project-title">CourseHub</h3>
           <p class="project-description moving-element">A collaboration platform for college students to join, create, post, and comment on channels</p>
           <p class="project-description moving-element">Tools: React, HTML, Tailwind CSS, Python Flask, MongoDB, Supabase, Figma, SQL</p>
-          <p class="project-description moving-element">Source Code: <a href="https://github.com/jitani04/CourseHub_" style="color: white;">Click Here</a></p>
+          <p class="project-description moving-element">Source Code: <a href="https://github.com/jitani04/CourseHub_" style="color: white;" target="_blank" rel="noopener noreferrer">Click Here</a></p>
         </div>
       </div>
       <div class="project">
-        <img src="myGraph.png" alt="Project Image" class="project-image">
+        <img src="myGraph.png" alt="MyGraph visualization" class="project-image" loading="lazy">
         <div class="project-details">
           <h3 class="project-title">MyGraph</h3>
           <p class="project-description moving-element"> MyGraph is a Python-based framework built using the NetworkX library to manage, analyze, and simulate complex networks.  It provides several features for graph creation, shortest path calculation, epidemic simulation using the SIR model, and visualizations.</p>
           <p class="project-description moving-element">Tools: Python NetworkX</p>
-          <p class="project-description moving-element"> Source Code: <a href="https://github.com/jitani04/Graph_Theory" style="color: white;">Click Here</a></p>
+          <p class="project-description moving-element"> Source Code: <a href="https://github.com/jitani04/Graph_Theory" style="color: white;" target="_blank" rel="noopener noreferrer">Click Here</a></p>
         </div>
       </div>
       <div class="project">
-        <img src="homeOwnership.jpg" alt="Project Image" class="project-image">
+        <img src="homeOwnership.jpg" alt="Home Ownership Prediction visuals" class="project-image" loading="lazy">
         <div class="project-details">
           <h3 class="project-title">Home Ownership Prediction</h3>
           <p class="project-description moving-element">This project demonstrates a binary classification task, predicting whether an individual is likely to be a homeowner based on various features like income, age, and workclass. I prepared a dataset in order to create, train, and test a Random Tree Classifier model and a Logistic Regression model.</p>
           <p class="project-description moving-element">Tools: Python Pandas, NumPy, Seaborn, Matplotlib</p>
-          <p class="project-description moving-element"> Source Code: <a href="https://github.com/jitani04/Home-Ownership-Prediction" style="color: white;">Click Here</a></p>
+          <p class="project-description moving-element"> Source Code: <a href="https://github.com/jitani04/Home-Ownership-Prediction" style="color: white;" target="_blank" rel="noopener noreferrer">Click Here</a></p>
         </div>
       </div>
       <div class="project">
-        <img src="Findash.png" alt="Project Image" class="project-image">
+        <img src="Findash.png" alt="FinDash dashboard screenshot" class="project-image" loading="lazy">
         <div class="project-details">
           <h3 class="project-title">FinDash</h3>
           <p class="project-description moving-element">A dynamic financial dashboard for business finance tracking, implementing secure API routes and PostgreSQL integration for real-time analytics.</p>
           <p class="project-description moving-element">Tools:Next.js, NextAuth.js, TypeScript, React, SQL, PostgreSQL, Tailwind CSS</p>
-          <p class="project-description moving-element"> Source Code: <a href="https://github.com/jitani04/FinDash/" style="color: white;"> Click Here</a></p>
+          <p class="project-description moving-element"> Source Code: <a href="https://github.com/jitani04/FinDash/" style="color: white;" target="_blank" rel="noopener noreferrer"> Click Here</a></p>
         </div>
       </div>
       <div class="project">
-        <img src="Arcade.png" alt="Project Image" class="project-image">
+        <img src="Arcade.png" alt="Arcade game center screenshot" class="project-image" loading="lazy">
         <div class="project-details">
           <h3 class="project-title">Arcade</h3>
           <p class="project-description moving-element">A game center web app providing access to various games, all in one place</p>
           <p class="project-description moving-element">Tools: Next.js, Node.js, HTML, MongoDB</p>
-          <p class="project-description moving-element"> Source Code: <a href="https://www.github.com/jitani04/Arcade" style="color: white;"> Click Here</a></p>
+          <p class="project-description moving-element"> Source Code: <a href="https://www.github.com/jitani04/Arcade" style="color: white;" target="_blank" rel="noopener noreferrer"> Click Here</a></p>
         </div>
       </div>
       <div class="view-more" style="text-align: center;">
-        <p>View more of my work on <a href="https://github.com/jitani04" target="_blank" style="color: white;">GitHub</a></p>
+        <p>View more of my work on <a href="https://github.com/jitani04" target="_blank" rel="noopener noreferrer" style="color: white;">GitHub</a></p>
       </div>
     </section>
 
     <section id="contact" class="animate-on-scroll" style="text-align: center;">
       <h2>Contact</h2>
       <p class="moving-element">Interested in collaborating or have an opportunity in mind? Let's chat!</p>
-      <p><a href="mailto:jmitani4@gmail.com" class="cta-button">Contact Me</a></p>
+
+  <form id="contact-form" class="contact-form" data-endpoint="/api/contact" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required placeholder="Your full name">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="your@email.com">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Write a short message..."></textarea>
+
+        <button type="submit" class="cta-button">Send Message</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+
+      <p style="margin-top: 12px;">Or email me directly at <a href="mailto:jmitani4@gmail.com">jmitani4@gmail.com</a></p>
     </section>
   </div>
 
   <footer>
     <p>© 2025 Jenna Itani</p>
   </footer>
-
-  <script src="particles.js"></script>
   <script src="script.js"></script>
+  
   <script>
     function toggleDescription(button) {
       const item = button.parentElement;
