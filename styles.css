@@ -308,18 +308,39 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .education-item {
-  background-color: transparent; /* No background */
-  border: none; /* No border */
-  padding: 0; /* No padding */
+  background-color: transparent;
+  border: none;
+  padding: 0;
 }
 
-.education-item h3, .education-item p {
+.education-item h3 {
+  margin: 0 0 4px;
+  padding: 0;
+  color: #f1f1f1;
+  font-size: 1.1rem;
+}
+
+.education-item p {
   margin: 0;
   padding: 0;
-  color: #f1f1f1; /* Light grey text */
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.honors-container {
+  max-width: 700px;
+  margin: 28px auto 0;
+}
+
+.honors-container h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #f1f1f1;
 }
 
 #about {
@@ -340,12 +361,45 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  color: #f1f1f1; /* Ensure the text color is light grey */
+  color: #f1f1f1;
 }
 
 .skills-list li {
-  color: #f1f1f1; /* Light grey text */
+  color: #f1f1f1;
   font-size: 1rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px auto 0;
+  max-width: 720px;
+  text-align: left;
+}
+
+.skills-category {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.skills-category-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #bbb;
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.skill-badge {
+  background-color: #555;
+  color: #f1f1f1;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  white-space: nowrap;
 }
 
 /* Contact form styles */
