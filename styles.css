@@ -195,6 +195,19 @@ h2 {
   color: #ddd; /* Lighter grey text */
 }
 
+.project-placeholder {
+  width: 50%;
+  min-height: 180px;
+  background: linear-gradient(135deg, #4a4a4a, #606060);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
 .experience-container {
   position: relative;
   margin: 0 auto;
@@ -478,6 +491,7 @@ footer {
   }
 
   .project-image,
+  .project-placeholder,
   .project-details {
     width: 100%;
   }
