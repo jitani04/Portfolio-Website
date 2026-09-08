@@ -369,37 +369,125 @@ h2 {
   font-size: 1rem;
 }
 
-.skills-grid {
+.skills-marquees {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin: 16px auto 0;
-  max-width: 720px;
+  gap: 18px;
+  margin: 32px auto 0;
+  max-width: 900px;
   text-align: left;
 }
 
-.skills-category {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
-}
-
-.skills-category-label {
+.skills-row-label {
+  display: block;
+  font-size: 0.75rem;
   font-weight: 600;
-  font-size: 0.85rem;
-  color: #bbb;
-  min-width: 140px;
-  flex-shrink: 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a9a9a;
+  margin-bottom: 8px;
+  padding-left: 4px;
 }
 
-.skill-badge {
-  background-color: #555;
+.marquee {
+  overflow: hidden;
+  /* fade the chips out at both edges so the loop has no visible seam */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  animation: marquee-left 40s linear infinite;
+}
+
+.skills-row[data-direction="right"] .marquee-track {
+  animation-name: marquee-right;
+}
+
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border: 1px solid #4f4f4f;
+  border-radius: 999px;
+  background-color: rgba(85, 85, 85, 0.45);
   color: #f1f1f1;
-  padding: 3px 10px;
-  border-radius: 12px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   white-space: nowrap;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.skill-chip:hover {
+  background-color: rgba(120, 120, 120, 0.6);
+  border-color: #8a8a8a;
+  transform: translateY(-2px);
+}
+
+.skill-logo {
+  width: 20px;
+  height: 20px;
+  opacity: 0.85;
+  transition: opacity 0.25s ease;
+}
+
+.skill-chip:hover .skill-logo {
+  opacity: 1;
+}
+
+/* chips for skills with no brand logo get a small dot instead */
+.skill-chip.no-logo::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #9a9a9a;
+}
+
+@media (max-width: 600px) {
+  .skill-chip {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+
+  .skill-logo {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: auto;
+  }
 }
 
 /* Contact form styles */

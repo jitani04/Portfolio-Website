@@ -107,3 +107,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+// Skills marquee: duplicate each row so the -50% translate loops seamlessly,
+// and scale the duration to the row's width so every row scrolls at one speed.
+document.addEventListener('DOMContentLoaded', function() {
+  const PIXELS_PER_SECOND = 40;
+
+  document.querySelectorAll('.skills-row .marquee-track').forEach(track => {
+    const originals = Array.from(track.children);
+    originals.forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    });
+
+    const setSpeed = () => {
+      const distance = track.scrollWidth / 2;
+      if (distance > 0) {
+        track.style.animationDuration = (distance / PIXELS_PER_SECOND) + 's';
+      }
+    };
+
+    setSpeed();
+    // logos load async and change the track width, so re-measure once they land
+    track.querySelectorAll('img').forEach(img => {
+      if (!img.complete) img.addEventListener('load', setSpeed, { once: true });
+    });
+    window.addEventListener('resize', setSpeed);
+  });
+});
