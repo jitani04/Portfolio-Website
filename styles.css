@@ -307,22 +307,48 @@ h2 {
 .education-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 760px;
+  margin: 24px auto 0;
+  text-align: left;
 }
 
 .education-item {
+  display: flex;
+  gap: 32px;
+  align-items: baseline;
+  padding: 22px 4px;
+  border-top: 1px solid #4a4a4a;
   background-color: transparent;
-  border: none;
-  padding: 0;
+  transition: background-color 0.25s ease;
+}
+
+.education-item:last-child {
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.education-item:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.education-dates {
+  flex: 0 0 130px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #9a9a9a;
+  white-space: nowrap;
+}
+
+.education-detail {
+  flex: 1;
 }
 
 .education-item h3 {
   margin: 0 0 4px;
   padding: 0;
   color: #f1f1f1;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
 .education-item p {
@@ -330,6 +356,24 @@ h2 {
   padding: 0;
   color: #ccc;
   font-size: 0.95rem;
+}
+
+.education-item .education-meta {
+  margin-top: 4px;
+  color: #9a9a9a;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .education-item {
+    flex-direction: column;
+    gap: 6px;
+    padding: 18px 4px;
+  }
+
+  .education-dates {
+    flex: none;
+  }
 }
 
 .honors-container {
@@ -401,7 +445,7 @@ h2 {
   align-items: center;
   gap: 10px;
   width: max-content;
-  animation: marquee-left 40s linear infinite;
+  animation: marquee-left 90s linear infinite;
 }
 
 .skills-row[data-direction="right"] .marquee-track {

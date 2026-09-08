@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Skills marquee: duplicate each row so the -50% translate loops seamlessly,
 // and scale the duration to the row's width so every row scrolls at one speed.
 document.addEventListener('DOMContentLoaded', function() {
-  const PIXELS_PER_SECOND = 40;
+  const PIXELS_PER_SECOND = 18;
 
   document.querySelectorAll('.skills-row .marquee-track').forEach(track => {
     const originals = Array.from(track.children);
