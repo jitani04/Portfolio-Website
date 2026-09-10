@@ -34,6 +34,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="/jennaitani_resume_fullstack.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
       </ul>
     </nav>
   </header>
@@ -46,7 +47,10 @@
     <div class="hero-content">
       <h1>Hi, I'm Jenna Itani</h1>
       <p>Full Stack Engineer &amp; AI/ML Builder</p>
-      <a href="#about" class="cta-button">Learn More</a>
+      <div class="hero-actions">
+        <a href="#about" class="cta-button">Learn More</a>
+        <a href="/jennaitani_resume_fullstack.pdf" class="cta-button cta-button-secondary" target="_blank" rel="noopener noreferrer">Resume</a>
+      </div>
     </div>
   </div>
 
@@ -192,9 +196,11 @@
           <p>8/2025 - Present</p>
           <button class="toggle-description" onclick="toggleDescription(this)">Role Description <span class="chevron"></span></button>
           <ul>
-            <li class="moving-element"> - Designed and implemented an AI model evaluation pipeline in Python using LLM-as-a-Judge methods, Google Sheets API, and GitHub Actions to validate outputs, track quality regressions, and share eval results across the AI engineering team</li>
-            <li class="moving-element"> - Built an automated regression test suite with pytest, Playwright, and kubectl, integrating validation into GitHub Actions and ArgoCD to reduce manual QA time across deployments</li>
-            <li class="moving-element"> - Developed an AI-assisted bug triage workflow that analyzes new Linear issues and generates PRDs and actionable fix suggestions for engineers using Claude Haiku, FastAPI, Kubernetes, and ArgoCD</li>
+            <li class="moving-element"> - Took a FastAPI microservice from prototype to production on Kubernetes with ArgoCD: an AI-assisted triage service that analyzes incoming Linear issues and posts generated PRDs and fix suggestions back to Linear as comments for engineers</li>
+            <li class="moving-element"> - Built full-stack features for an internal AI evaluation platform in Python, including views that visualize quality trends (a heatmap of scores over time and a per-environment breakdown) and automatic email and Slack alerts for regressions</li>
+            <li class="moving-element"> - Built automated end-to-end regression testing with pytest and Playwright, running twice daily and on deployments through GitHub Actions to detect application regressions</li>
+            <li class="moving-element"> - Built an LLM-as-a-Judge evaluation pipeline in Python using Kubernetes, GitHub Actions, and the Google Sheets API to validate model outputs, track quality regressions, and share results across the engineering team</li>
+            <li class="moving-element"> - Built input-processing logic for a production industrial AI agent that consolidates sheet IDs from P&amp;IDs (piping &amp; instrumentation diagrams) to structure engineering-document context for downstream LLM reasoning</li>
           </ul>
         </div>
         <div class="experience-item right">
@@ -244,6 +250,26 @@
             Source Code: <a href="https://github.com/jitani04/Sapient" style="color: white;" target="_blank" rel="noopener noreferrer">GitHub</a> &nbsp;|&nbsp;
             Live: <a href="https://sapient-ats.com/" style="color: white;" target="_blank" rel="noopener noreferrer">sapient-ats.com</a>
           </p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-placeholder" aria-hidden="true">LL</div>
+        <div class="project-details">
+          <h3 class="project-title">LocalLoop &mdash; Event Discovery PWA</h3>
+          <p class="project-description moving-element">Progressive Web App for discovering and tracking local events, built as a Vue 3 SPA with a service worker and offline shell, a Node/Express API, Firestore, Redis caching, and JWT auth, using Ticketmaster event data and Gemini recommendations.</p>
+          <p class="project-description moving-element">Ran the full deployment: Dockerized frontend and backend on Google Kubernetes Engine via a GitHub Actions CI/CD pipeline (test, build, roll out), with HTTPS through cert-manager and Let's Encrypt and self-healing, scalable pods.</p>
+          <p class="project-description moving-element">Tools: Vue 3, Node.js, Express, Firestore, Redis, Docker, Kubernetes (GKE), GitHub Actions</p>
+          <p class="project-description moving-element">Source Code: <a href="https://github.com/jitani04/LocalLoop" style="color: white;" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-placeholder" aria-hidden="true">OF</div>
+        <div class="project-details">
+          <h3 class="project-title">OrderFlow &mdash; Order &amp; Inventory Management API</h3>
+          <p class="project-description moving-element">Order and inventory management REST API in ASP.NET Core (C#) with EF Core and PostgreSQL, where placing an order reserves stock inside a database transaction and confirms or rejects based on availability. Secured with JWT auth.</p>
+          <p class="project-description moving-element">Containerized with Docker and deployed to Kubernetes on AWS, with a React admin panel for managing products, stock, and orders, plus unit and integration tests.</p>
+          <p class="project-description moving-element">Tools: C#, ASP.NET Core, EF Core, PostgreSQL, React, Docker, Kubernetes, AWS</p>
+          <p class="project-description moving-element">Source Code: <a href="https://github.com/jitani04/OrderFlow" style="color: white;" target="_blank" rel="noopener noreferrer">GitHub</a></p>
         </div>
       </div>
       <div class="project">
